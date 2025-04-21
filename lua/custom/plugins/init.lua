@@ -2,4 +2,14 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
-return {}
+return {
+  {
+    'ggandor/leap.nvim',
+    config = function()
+      require('leap').set_default_mappings()
+    end,
+    dependencies = {
+      'tpope/vim-repeat',
+    },
+  },
+}
